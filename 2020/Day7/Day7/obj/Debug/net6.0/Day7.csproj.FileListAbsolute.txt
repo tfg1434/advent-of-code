@@ -1,0 +1,16 @@
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\bin\Debug\net6.0\Day7.exe
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\bin\Debug\net6.0\Day7.deps.json
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\bin\Debug\net6.0\Day7.runtimeconfig.json
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\bin\Debug\net6.0\Day7.dll
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\bin\Debug\net6.0\ref\Day7.dll
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\bin\Debug\net6.0\Day7.pdb
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.GlobalUsings.g.cs
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.csproj.AssemblyReference.cache
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.AssemblyInfoInputs.cache
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.AssemblyInfo.cs
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.csproj.CoreCompileInputs.cache
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.dll
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\ref\Day7.dll
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.pdb
+C:\Users\Eglin\source\repos\advent-of-code\2020\Day7\Day7\obj\Debug\net6.0\Day7.genruntimeconfig.cache
