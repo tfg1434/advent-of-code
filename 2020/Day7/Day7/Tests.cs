@@ -1,5 +1,4 @@
 ﻿using Xunit;
-using static Day7.Program;
 
 namespace Day7; 
 
@@ -16,6 +15,6 @@ vibrant plum bags contain 5 faded blue bags, 6 dotted black bags.
 faded blue bags contain no other bags.
 dotted black bags contain no other bags.";
         
-        Assert.Equal(4, Silver(input));
+        Assert.Equal(4, Silver.Run(input));
     }
 }
