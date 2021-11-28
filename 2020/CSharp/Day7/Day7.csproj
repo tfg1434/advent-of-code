@@ -13,4 +13,10 @@
       <PackageReference Include="xunit" Version="2.4.2-pre.12" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="in.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
 </Project>
