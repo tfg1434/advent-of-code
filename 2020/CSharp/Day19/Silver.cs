@@ -1,5 +1,4 @@
-﻿using System.Data;
-using FunctionalSharp;
+﻿using FunctionalSharp;
 using static FunctionalSharp.F;
 
 namespace Day19;
@@ -12,25 +11,25 @@ record struct RuleRef(int Ref) : IRule;
 
 public static class Silver {
     public static int Run(string input) {
-        string[] lines = input.Split(Environment.NewLine);
-        IEnumerable<string> rulesRaw = lines.TakeWhile(line => line != "");
-        IEnumerable<string> messages = lines.SkipWhile(line => line != "").Skip(1);
-        IEnumerable<IRule> rules = rulesRaw.Map(ParseRule);
+        Map<int, IEnumerable<IEnumerable<IRule>>> rules = ParseRules(input);
         
-        
-        
+
+
+
         return 0;
     }
     
-    private static Map<int, Lst<IRule>> ParseRules(string input) {
-        return input.Split(Environment.NewLine).Map(line => {
+    private static Map<int, IEnumerable<IEnumerable<IRule>>> ParseRules(string input) 
+        => input.Split(Environment.NewLine).Map(line => {
             string[] split = line.Split(": ");
             int id = int.Parse(split[0]);
-            
+            string[] parts = split[1].Split(" | ");
 
-        });
-    }
+            return (id, parts.Map(side =>
+                side.Split(' ').Map<string, IRule>(part =>
+                    part.StartsWith('"') ? new Constant(part[1]) : new RuleRef(int.Parse(part)))));
 
 
+        }).ToMap();
     }
 }

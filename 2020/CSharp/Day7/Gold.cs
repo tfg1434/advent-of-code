@@ -3,7 +3,7 @@ using FunctionalSharp;
 using static FunctionalSharp.F;
 using BagName = System.String;
 
-namespace Day19;
+namespace Day7;
 
 readonly record struct Bag(BagName Name, int Count);
 
