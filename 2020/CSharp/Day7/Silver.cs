@@ -1,7 +1,7 @@
 ﻿using FunctionalSharp;
 using static FunctionalSharp.F;
 
-namespace Day7;
+namespace Day19;
 
 public static class Silver {
     public static int Run(string input) {
