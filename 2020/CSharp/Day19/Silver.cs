@@ -23,22 +23,25 @@ public static class Silver {
         return 0;
     }
     
-    private static Lst<int> MatchingRules(Lst<Lst<IRule>> rules, int position, int id) {
+    private static Lst<int> MatchingRules(Map<int, Lst<Lst<IRule>>> rules, int position, int id) {
         //orRule: inner Lst
         //rule: inner inner IRule
 
         rules[id].Map(orRule =>  {
             var positions = List(position);
-
-            orRule.ForEach(rule => {
-                positions = positions.Map(idx =>
+        
+            orRule.ForEach(rule => { //one rule must match for message to be valid
+                positions = positions.Map<int, Lst<int>>(idx =>
                     rule switch {
-                        Constant @const when 
-                    })
+                        Constant @const when idx == @const.Symbol => List(idx + 1),
+                        RuleRef @ref => MatchingRules(rules, @ref.Ref, idx),
+                        _ => null,
+                    }
+                ).Flatten();
             });
+        
+            return positions;
         });
-
-        return default;
     }
     
     private static Map<int, Lst<Lst<IRule>>> ParseRules(IEnumerable<string> lines) 
