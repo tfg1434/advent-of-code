@@ -4,32 +4,20 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 with open(os.path.join(__location__, "in.txt")) as file:
     lines = file.readlines()
 
-def getWinPos(n: int) -> list[int]:
-    y = n
+input = [x.rstrip("\n").split(" ") for x in lines]
 
-    list = []
-    for _ in range(3):
-        list.append(y)
+aim = 0
+hPos = 0
+depth = 0
 
-        y += 1
+for instr in input:
+    if (instr[0] == "forward"):
+        hPos += int(instr[1])
+        depth += aim * int(instr[1])
+    elif (instr[0] == "up"):
+        aim -= int(instr[1])
+    elif (instr[0] == "down"):
+        aim += int(instr[1])
 
-    return list
-
-amnt = len(lines) - 2
-lastSum = 999999
-ans = 0
-
-for i in range(amnt):
-    sum = 0
-
-    for j in getWinPos(i):
-        sum += int(lines[j])
-
-    if sum > lastSum:
-        ans += 1
-
-    lastSum = sum
-
-print(ans)
-
+print(hPos * depth)
 

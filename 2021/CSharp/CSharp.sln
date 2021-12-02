@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGNOREME", "IGNOREME\IGNOREME.csproj", "{D0F0EA63-6615-49CE-B0AF-CEEE2F0F3B3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2", "Day2\Day2.csproj", "{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0F0EA63-6615-49CE-B0AF-CEEE2F0F3B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0F0EA63-6615-49CE-B0AF-CEEE2F0F3B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0F0EA63-6615-49CE-B0AF-CEEE2F0F3B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0F0EA63-6615-49CE-B0AF-CEEE2F0F3B3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
