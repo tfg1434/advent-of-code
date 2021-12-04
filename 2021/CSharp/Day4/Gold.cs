@@ -40,14 +40,13 @@ public static class Gold {
                 }
 
                 if (CheckForMatch(boards[i]))
-                    boards.RemoveAt(i);
-
-                if (boards.Count == 0) {
-                    ans = Enumerable.Range(0, 5)
-                        .Map(y => boards[i][y].Sum(square => !square.Marked ? square.Number : 0)).Sum() * n;
-
-                    return ans;
-                }
+                    if (boards.Count == 1)
+                        return Enumerable.Range(0, 5)
+                            .Map(y => boards[i][y].Sum(square => !square.Marked ? square.Number : 0)).Sum() * n;
+                    else {
+                        boards.RemoveAt(i);
+                        i--;
+                    }
             }
         }
 
