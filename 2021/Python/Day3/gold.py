@@ -40,16 +40,18 @@ while True:
             ones += 1
 
     if zeros > ones:
-        oxy = [l for l in oxy if l[x] == "0"]
+        co2 = [l for l in co2 if l[x] == "1"]
     elif zeros < ones or zeros == ones:
-        oxy = [l for l in oxy if l[x] == "1"]
+        co2 = [l for l in co2 if l[x] == "0"]
 
-    if (len(oxy) == 1):
+    if (len(co2) == 1):
         break
 
     x += 1
 
 print(oxy)
+print(co2)
+print(int(oxy[0], 2) * int(co2[0], 2))
     
 
 
