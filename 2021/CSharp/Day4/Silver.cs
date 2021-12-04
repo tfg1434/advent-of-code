@@ -11,8 +11,8 @@ public static class Silver {
 
     static bool CheckForMatch(List<List<BoardSquare>> board) {
         return //board[0][0] [1][0] [2][0] ... [0][1]
-            Enumerable.Range(0, 4).Map(y => board[y].All(square => square.Marked)).Any() ||
-            Enumerable.Range(0, 4).Map(x => Enumerable.Range(0, 4).Map(y => board[y][x]).All(square => square.Marked)).Any();
+            Enumerable.Range(0, 5).Map(y => board[y].All(square => square.Marked)).Any(b => b) ||
+            Enumerable.Range(0, 5).Map(x => Enumerable.Range(0, 5).Map(y => board[y][x]).All(square => square.Marked)).Any(b => b);
         
     }
     
@@ -21,6 +21,7 @@ public static class Silver {
         IEnumerable<int> numbers = lines[0].Split(',').Map(int.Parse).ToLst();
         int boardsCount = (lines.Length - 1) / 6;
         List<List<List<BoardSquare>>> boards = new();//new int[boardsCount][Board];
+        int ans;
 
         for (int i = 2; i < boardsCount * 6 + 2; i += 6) {
             boards.Add(lines[i..(i + 5)]
@@ -29,24 +30,24 @@ public static class Silver {
         }
 
         foreach (int n in numbers) {
-            foreach (List<List<BoardSquare>> board in boards) {
-                foreach (List<BoardSquare> row in board) {
-                    foreach (BoardSquare square in row) {
-                        //to mutate square
-                        BoardSquare boardSquare = square;
-                        
-                        if (boardSquare.Number == n) {
-                            boardSquare.Marked = true;
+            for (int i = 0; i < boards.Count; i++) {
+                for (int j = 0; j < boards[i].Count; j++) {
+                    for (int k = 0; k < boards[i][j].Count; k++) {
+                        if (boards[i][j][k].Number == n) {
+                            boards[i][j][k] = OfBoardSquare(true, boards[i][j][k].Number);
                         }
                     }
                 }
 
-                if (CheckForMatch(board)) {
-                    int b = 5;
+                if (CheckForMatch(boards[i])) {
+                    ans = Enumerable.Range(0, 5)
+                        .Map(y => boards[i][y].Sum(square => !square.Marked ? square.Number : 0)).Sum() * n;
+
+                    return ans;
                 }
             }
         }
-        
+
         return default;
     }
 }
