@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IGNOREME", "IGNOREME\IGNOREME.csproj", "{D0F0EA63-6615-49CE-B0AF-CEEE2F0F3B3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day2", "Day2\Day2.csproj", "{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day4", "Day4\Day4.csproj", "{C9B9DA5F-D2E4-4BE6-A51C-3C7DCFBB61BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
