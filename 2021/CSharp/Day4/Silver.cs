@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using FunctionalSharp;
 
-namespace Day4;
+namespace Day5;
 
 public static class Silver {
     private readonly record struct BoardSquare(int Number, bool Marked);
