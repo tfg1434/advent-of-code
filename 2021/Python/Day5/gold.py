@@ -1,6 +1,5 @@
 import os
-import math
-import numpy as np
+from functools import reduce
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 with open(os.path.join(__location__, "in.txt")) as file:
@@ -12,35 +11,31 @@ def processLine(line):
     return list(map(lambda s: list(map(int, s.split(","))), l))
 
 lineSegs = list(map(processLine, lines))
+map = {}
+sign = lambda x: x and (1, -1)[x<0]
 
-print(lineSegs)
+for seg in lineSegs:
+    fr = seg[0]
+    to = seg[1]
+    dx = to[0] - fr[0]
+    dy = to[1] - fr[1]
 
-def covering(x, y):
-    count = 0
-    for seg in lineSegs:
-        fr = seg[0]
-        to = seg[1]
-        isH = fr[1] == to[1]
-        isV = fr[0] == to[0]
+    # +1 bc we want to include the end point
+    # length for diagonal is longest length
+    for i in range(max(abs(dx), abs(dy)) + 1):
+        x = fr[0] + sign(dx) * i
+        y = fr[1] + sign(dy) * i
 
-        if isH:
-            count += 1 if (fr[0] <= x <= to[0] or to[0] <= x <= fr[0]) and y == fr[1] else 0
-        elif isV:
-            count += 1 if (fr[1] <= y <= to[1] or to[1] <= y <= fr[1]) and x == fr[0] else 0
-
-    return count
-
-# grid = np.full(shape=(1000, 1000), fill_value=0, dtype=int)
+        if (x, y) not in map:
+            map[(x, y)] = 1
+        else:
+            map[(x, y)] += 1
 
 ans = 0
-
-for x in range(1000):
-    if (x % 100) == 0:
-        print(x)
-
-    for y in range(1000):
-        if (covering(x, y) >= 2):
-            ans += 1
+for k in map:
+    if map[k] >= 2:
+        ans += 1
 
 print(ans)
+
 
