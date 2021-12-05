@@ -1,5 +1,4 @@
 import os
-from functools import reduce
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 with open(os.path.join(__location__, "in.txt")) as file:
