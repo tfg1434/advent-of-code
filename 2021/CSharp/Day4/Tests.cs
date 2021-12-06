@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Day5; 
+namespace Day4; 
 
 public class Tests {
     [Fact]

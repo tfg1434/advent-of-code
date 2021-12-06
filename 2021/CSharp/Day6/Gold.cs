@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using FunctionalSharp;
+﻿using FunctionalSharp;
 
 namespace Day6;
 
