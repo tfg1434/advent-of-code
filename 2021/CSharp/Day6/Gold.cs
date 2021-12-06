@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using FunctionalSharp;
 
-namespace Day5;
+namespace Day6;
 
 public static class Gold {
     public static int Run(string input) {
