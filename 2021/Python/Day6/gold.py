@@ -13,8 +13,7 @@ for fish in fishes:
 for i in range(256):
     nts = [0] * 10
 
-    for j in range(len(types) - 1):
-        nts[j] += types[j + 1]
+    nts[0:9] = types[1:10]
 
     # fish of type 6 += fish of type 0
     nts[6] += types[0]
