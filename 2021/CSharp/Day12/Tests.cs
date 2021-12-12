@@ -34,8 +34,14 @@ kj-dc";
     
     [Fact]
     public void GoldTestCase() {
-        const string input = @"";
+        const string input = @"start-A
+start-b
+A-c
+A-b
+b-d
+A-end
+b-end";
 
-        Assert.Equal(1924, Gold.Run(input));
+        Assert.Equal(36, Gold.Run(input));
     }
 }
